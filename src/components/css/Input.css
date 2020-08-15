@@ -1,0 +1,25 @@
+/*Form that contains the input field for DDG search*/
+form {
+    margin-bottom: 10px;
+    text-align:center;
+  }
+  
+  /*Input field for DDG search*/
+  input {
+    text-align:center;
+    display: table-cell;
+    width: 80%;
+    padding: 10px 10px;
+    border-radius: 25px;
+    background: transparent;
+    border: 2px solid;
+    border-color: rgb(95, 95, 95);
+    background-color: rgb(36, 36, 36);
+    color: rgb(95, 95, 95);;
+  
+    text-align: center;
+  }
+  /*Whenever the input is focused*/
+  input:focus {
+    outline: 0;
+  }

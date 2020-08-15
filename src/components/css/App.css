@@ -1,0 +1,36 @@
+
+/*The main header*/
+.App-header {
+  background-color: rgb(36, 36, 36);
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  color: rgb(173, 173, 173);
+}
+/*Nav that contains website categories*/
+.Header-nav {
+  background-color: rgb(48, 48, 48);
+  color:rgb(173, 173, 173);
+  font-size:15px;
+  text-align:center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position:relative;
+  border-radius: 25px;
+  width: 100%; left:auto; right:auto; margin:auto; 
+  box-shadow: 10px 5px rgb(32, 32, 32);
+  
+}
+
+.Header-div{
+margin:auto;
+}
+
+a{
+  color: inherit;
+  text-decoration:none;
+  cursor: pointer;
+  
+}
+
+
