@@ -1,17 +1,77 @@
-import React from "react"
+import React, {useState} from "react"
+import {Button, Menu, MenuItem, Switch, FormGroup, FormControlLabel } from "@material-ui/core"
+import MoreVertIcon from '@material-ui/icons/MoreVert';
 import '../css/Settings.css'
 //TODO: Use the react-sidebar thingey and make it a functioning settings panel 
-const Settings = () => {
-    const openSettings = () => {
+const Settings = ({themeToggler}) => {
 
-    }
+    const [state, setState] = useState({
+        checkedA: true,
+        checkedB: true,
+      });
+    
+      const handleChange = (event) => {
+        setState({ ...state, [event.target.name]: event.target.checked });
+      };
+
+      const handleDarkMode = (event) => {
+        setState({ ...state, [event.target.name]: event.target.checked });
+        themeToggler()
+      };
+
+      const handleGreeting = (event) => {
+        setState({ ...state, [event.target.name]: event.target.checked });
+      };
+    
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    }; 
+  
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
     return(
         <div className="Settings-div">
-            <a title="Settings" onClick={() => openSettings()}>
-                <i className="cog">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroklinejoin="round" className="feather feather-settings"><circle cx="12" r="3" cy="12"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-                </i>
-            </a>
+                <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+    <MoreVertIcon />
+    </Button>
+    <Menu
+    id="simple-menu"
+    anchorEl={anchorEl}
+    keepMounted
+    open={Boolean(anchorEl)}
+    onClose={handleClose}
+    >
+    <FormGroup>
+      <FormControlLabel
+        control={
+          <Switch
+            checked={state.checkedA}
+            onChange={handleDarkMode}
+            name="checkedA"
+            color="primary"
+          />
+        }
+        label="Dark Mode"
+      />
+
+      <FormControlLabel
+        control={
+          <Switch
+            checked={state.checkedB}
+            onChange={handleChange}
+            name="checkedB"
+            color="primary"
+          />
+        }
+        label="Greeting"
+      />
+    </FormGroup>
+
+    <MenuItem onClick={handleClose}>Logout</MenuItem>
+    </Menu>
         </div> 
     )
 }
