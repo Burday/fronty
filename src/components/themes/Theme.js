@@ -1,6 +1,7 @@
 export const lightTheme = {
     body: '#FFF',
     text: '#363537',
+    borderColor: "#adadad",
     toggleBorder: '#FFF',
     background: '#363537',
     headerBackground: '#dedede',
@@ -9,6 +10,7 @@ export const lightTheme = {
 export const darkTheme = {
     body: '#363537',
     text: '#adadad',
+    borderColor: "#363537",
     toggleBorder: '#6B8096',
     background: '#242424',
     headerBackground: '#303030',
