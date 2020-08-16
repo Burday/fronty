@@ -6,6 +6,7 @@ export const lightTheme = {
     background: '#363537',
     headerBackground: '#dedede',
     shadow: '#b5b5b5',
+    inputBG: "",
 }
 export const darkTheme = {
     body: '#363537',
@@ -15,4 +16,5 @@ export const darkTheme = {
     background: '#242424',
     headerBackground: '#303030',
     shadow: '#202020',
+    inputBG: "#242424",
 }

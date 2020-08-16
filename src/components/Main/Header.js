@@ -4,6 +4,7 @@ import Websites from './Websites.js'
 import Greeting from './Greeting.js'
 import DateTime from "./DateTime.js"
 import WebsitesStyle from "../themes/WebsitesStyle"
+import InputStyle from '../themes/InputStyle'
 import React from 'react'
 
 const Header = () => {
@@ -13,7 +14,9 @@ const Header = () => {
       <nav className="Header-nav">
           <DateTime/>
           <Weather/>
-          <Input/>
+          <InputStyle>
+            <Input/>
+          </InputStyle>
           <WebsitesStyle>
             <Websites/>
           </WebsitesStyle>
