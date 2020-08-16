@@ -7,16 +7,7 @@
 
 }
 /*Nav that contains website categories*/
-.Header-nav {
-  font-size:15px;
-  text-align:center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  position:relative;
-  border-radius: 25px;
-  width: 100%; left:auto; right:auto; margin:auto; 
-  
-}
+
 
 .Header-div{
 margin:auto;
