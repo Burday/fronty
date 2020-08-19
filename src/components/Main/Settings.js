@@ -1,26 +1,37 @@
-import React, {useState} from "react"
+import React, {useState,useEffect} from "react"
 import {Button, Menu, MenuItem, Switch, FormGroup, FormControlLabel } from "@material-ui/core"
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import '../css/Settings.css'
 //TODO: Use the react-sidebar thingey and make it a functioning settings panel 
-const Settings = ({themeToggler}) => {
-
+const Settings = ({theme,themeToggler, greetingToggler}) => {
+    console.log(theme)
     const [state, setState] = useState({
-        checkedA: true,
-        checkedB: true,
+        darkMode: null,
+        greeting: null,
       });
-    
-      const handleChange = (event) => {
-        setState({ ...state, [event.target.name]: event.target.checked });
-      };
+
+      const localTheme = window.localStorage.getItem('theme');
+      useEffect(() => {
+        if(localTheme === "dark"){
+          setState({ darkMode: true});
+      } if(localTheme === "light"){
+        setState({ darkMode: false});
+      }
+      }, [])
 
       const handleDarkMode = (event) => {
         setState({ ...state, [event.target.name]: event.target.checked });
+        if(state.darkMode === "dark"){
+          window.localStorage.setItem('theme', `light`)
+        } else {
+          window.localStorage.setItem('theme', `dark`)
+        }
         themeToggler()
       };
 
       const handleGreeting = (event) => {
         setState({ ...state, [event.target.name]: event.target.checked });
+        greetingToggler()
       };
     
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -48,9 +59,9 @@ const Settings = ({themeToggler}) => {
       <FormControlLabel
         control={
           <Switch
-            checked={state.checkedA}
+            checked={state.darkMode}
             onChange={handleDarkMode}
-            name="checkedA"
+            name="darkMode"
             color="primary"
           />
         }
@@ -60,9 +71,9 @@ const Settings = ({themeToggler}) => {
       <FormControlLabel
         control={
           <Switch
-            checked={state.checkedB}
-            onChange={handleChange}
-            name="checkedB"
+            checked={state.greeting}
+            onChange={handleGreeting}
+            name="greeting"
             color="primary"
           />
         }

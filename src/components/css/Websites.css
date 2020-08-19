@@ -11,9 +11,17 @@
     transition: all 0.5s;
     cursor:default;
     list-style-type: none;
+
+    border-style: solid;
+    border-width: 0px 1px 0px 1px;
   }
   /*Hovering on the entire category*/
+.unlisted-element:hover{
+    border-width: 0px 1px 0px 1px;
+    border-right-style: solid;
+    border-left-style:solid;
 
+  }
   /*Style for paragraphs, contained in the website names*/
 p{
     top:auto;
@@ -25,56 +33,56 @@ p{
 
   
 /*Hovering on the websites pinned in each category*/
-ul[class=entertainment]:hover{
+.entertainment:hover{
     color:rgb(255, 98, 98);
     border-color:rgb(255, 98, 98);
   }
   
-  ul[class=entertainment] > li> a:hover {
+  .entertainment > li> a:hover {
     color:rgb(199, 0, 0);
     transition: 1s;
   }
   
   
-  ul[class=social]:hover{
+  .social:hover{
     color:rgb(50, 223, 107);
     border-color:rgb(50, 223, 107);
   }
   
-  ul[class=social] > li> a:hover {
+  .social > li> a:hover {
     color:rgb(0, 168, 56);
     transition: 1s;
   }
   
-  ul[class=music]:hover{
+  .music:hover{
     color: rgb(70, 202, 255);
     border-color:rgb(70, 202, 255);
   }
   
-  ul[class=music] > li> a:hover {
+  .music > li> a:hover {
     color:rgb(25, 163, 218);
     transition: 1s;
   }
   
-  ul[class=Reddit]:hover{
+  .Reddit:hover{
     color: rgb(195, 91, 255);
     border-color:rgb(195, 91, 255);
   }
   
-  ul[class=Reddit] > li> a:hover {
+  .Reddit > li> a:hover {
     color:rgb(138, 9, 212);
     transition: 1s;
   }
   
   
-  ul[class=chan]:hover{
+  .chan:hover{
     color: rgb(75, 255, 105);
     border-color:rgb(75, 255, 105);
   
   }
   
   
-  ul[class=chan] > li> a:hover {
+  .chan > li> a:hover {
     color:rgb(0, 199, 33);
     transition: 1s;
     

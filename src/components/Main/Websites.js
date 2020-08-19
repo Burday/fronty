@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import '../css/Websites.css'
 const Websites = () => {
     const UL = styled.ul`
-    border-color: ${props => props.theme.borderColor}; 
+    border-color: ${props => props.theme.headerBackground}; 
 color:${props => props.theme.text};
 `
     return(
