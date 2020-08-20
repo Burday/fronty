@@ -12,8 +12,8 @@ import {useGreeting} from './components/Main/useGreeting'
 function App() {
   const [theme, themeToggler] = useDarkMode();
 
-  const themeMode = theme === 'light' ? lightTheme : darkTheme;
-
+  const themeMode = theme === false ? lightTheme : darkTheme;
+  
   const [greeting, greetingToggler] = useGreeting()
   return (
     <ThemeProvider theme={themeMode}>
@@ -21,7 +21,7 @@ function App() {
     <GlobalStyles/>
     <div className="App">
       <header className="App-header">
-      <Settings theme={theme} themeToggler={themeToggler} greetingToggler={greetingToggler}/>
+      <Settings theme={theme} themeToggler={themeToggler} greeting={greeting} greetingToggler={greetingToggler}/>
         <HeaderStyle>
           <Header/>
         </HeaderStyle>

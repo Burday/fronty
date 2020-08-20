@@ -1,19 +1,18 @@
 import { useEffect, useState } from 'react';
 export const useGreeting = () => {
-    const [theme, setTheme] = useState('light');
-
+    const [greeting, setGreeting] = useState(true);
     const setMode = mode => {
-        window.localStorage.setItem('theme', mode)
-        setTheme(mode)
+        window.localStorage.setItem('greeting', mode)
+        setGreeting(mode)
     };
 
     const greetingToggler = () => {
-        theme === 'light' ? setMode('dark') : setMode('light')
+        greeting === true ? setMode(false) : setMode(true)
     };
 
     useEffect(() => {
-        const localTheme = window.localStorage.getItem('theme');
-        localTheme && setTheme(localTheme)
+        const localGreeting = window.localStorage.getItem('greeting');
+        localGreeting && setGreeting(localGreeting)
     }, []);
-    return [theme, greetingToggler]
+    return [greeting, greetingToggler]
 };
