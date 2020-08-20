@@ -9,10 +9,10 @@ const Settings = ({theme,themeToggler, greetingToggler, greeting}) => {
         darkMode: theme,
         greeting: greeting,
       });
-      
+
+      //console.log(`State of darkmode ${state.darkMode} \n State of greeting ${state.greeting}`)
 
       const handleDarkMode = (event) => {
-
         setState({ ...state, [event.target.name]: event.target.checked });
         themeToggler()
       };
@@ -47,29 +47,8 @@ const Settings = ({theme,themeToggler, greetingToggler, greeting}) => {
     onClose={handleClose}
     >
     <FormGroup>
-      <FormControlLabel
-        control={
-          <Switch
-            checked={state.darkMode}
-            onChange={handleDarkMode}
-            name="darkMode"
-            color="primary"
-          />
-        }
-        label="Dark Mode"
-      />
-
-      <FormControlLabel
-        control={
-          <Switch
-            checked={state.greeting}
-            onChange={handleGreeting}
-            name="greeting"
-            color="primary"
-          />
-        }
-        label="Greeting"
-      />
+      <Button variant="contained" color="primary" onClick={handleDarkMode}>{state.darkMode === true ? "Edit task" : "Add task"}</Button>
+      <Button variant="contained" color="primary" onClick={handleGreeting}>Enable/Disable Greeting</Button>
     </FormGroup>
     </Menu>
         </div> 
