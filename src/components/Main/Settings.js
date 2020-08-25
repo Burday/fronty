@@ -38,10 +38,12 @@ const Settings = ({theme,themeToggler, greetingToggler, greeting}) => {
     open={Boolean(anchorEl)}
     onClose={handleClose}
     >
-    <FormGroup>
+      <div className="buttonDiv">
       <Button name="darkMode "variant="contained" color="primary" onClick={handleDarkMode}>{theme ? "Disable" : "Enable"} Dark Mode</Button>
+      </div>
+      <div className="buttonDiv">
       <Button name="greeting" variant="contained" color="primary" onClick={handleGreeting}>{greeting ? "Disable" : "Enable"} Greeting</Button>
-    </FormGroup>
+      </div>
     </Menu>
         </div> 
     )
