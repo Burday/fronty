@@ -1,28 +1,20 @@
-import React, {useState,useEffect} from "react"
-import {Button, Menu, MenuItem, Switch, FormGroup, FormControlLabel } from "@material-ui/core"
+import React, {useState} from "react"
+import {Button, Menu, FormGroup } from "@material-ui/core"
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import '../css/Settings.css'
 
 
 const Settings = ({theme,themeToggler, greetingToggler, greeting}) => {
-    const [state, setState] = useState({
-        darkMode: theme,
-        greeting: greeting,
-      });
 
       //console.log(`State of darkmode ${state.darkMode} \n State of greeting ${state.greeting}`)
 
       const handleDarkMode = (event) => {
-        setState({ ...state, [event.target.name]: event.target.checked });
         themeToggler()
       };
 
       const handleGreeting = (event) => {
-
-        setState({ ...state, [event.target.name]: event.target.checked });
         greetingToggler()
       };
-
 
 
     const [anchorEl, setAnchorEl] = useState(null);
@@ -47,8 +39,8 @@ const Settings = ({theme,themeToggler, greetingToggler, greeting}) => {
     onClose={handleClose}
     >
     <FormGroup>
-      <Button variant="contained" color="primary" onClick={handleDarkMode}>{state.darkMode === true ? "Edit task" : "Add task"}</Button>
-      <Button variant="contained" color="primary" onClick={handleGreeting}>Enable/Disable Greeting</Button>
+      <Button name="darkMode "variant="contained" color="primary" onClick={handleDarkMode}>{theme ? "Disable" : "Enable"} Dark Mode</Button>
+      <Button name="greeting" variant="contained" color="primary" onClick={handleGreeting}>{greeting ? "Disable" : "Enable"} Greeting</Button>
     </FormGroup>
     </Menu>
         </div> 

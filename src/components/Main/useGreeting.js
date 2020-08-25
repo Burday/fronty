@@ -1,18 +1,24 @@
 import { useEffect, useState } from 'react';
+const lelocal = window.localStorage.getItem('greeting');
+const localGreeting = JSON.parse(lelocal)
+
 export const useGreeting = () => {
-    const [greeting, setGreeting] = useState(true);
+    const [greeting, setGreeting] = useState(localGreeting);
+
     const setMode = mode => {
         window.localStorage.setItem('greeting', mode)
         setGreeting(mode)
     };
 
     const greetingToggler = () => {
-        greeting === true ? setMode(false) : setMode(true)
+        greeting === false ? setMode(true) : setMode(false)
     };
 
     useEffect(() => {
-        const localGreeting = window.localStorage.getItem('greeting');
-        localGreeting && setGreeting(localGreeting)
+        
+        localGreeting ? setGreeting(localGreeting) : setMode(false)
+
     }, []);
+
     return [greeting, greetingToggler]
 };
