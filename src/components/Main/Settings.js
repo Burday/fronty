@@ -1,11 +1,14 @@
 import React, {useState} from "react"
-import {Button, Menu, FormGroup } from "@material-ui/core"
+import {Button, Menu } from "@material-ui/core"
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import '../css/Settings.css'
-
+import styled from 'styled-components'
 
 const Settings = ({theme,themeToggler, greetingToggler, greeting}) => {
 
+  const CustomIcon = styled(MoreVertIcon)`
+    color: ${props => props.theme.text}
+  `
       //console.log(`State of darkmode ${state.darkMode} \n State of greeting ${state.greeting}`)
 
       const handleDarkMode = (event) => {
@@ -29,7 +32,7 @@ const Settings = ({theme,themeToggler, greetingToggler, greeting}) => {
     return(
         <div className="Settings-div">
                 <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-    <MoreVertIcon />
+    <CustomIcon/>
     </Button>
     <Menu
     id="simple-menu"

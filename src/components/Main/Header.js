@@ -7,10 +7,10 @@ import WebsitesStyle from "../themes/WebsitesStyle"
 import InputStyle from '../themes/InputStyle'
 import React from 'react'
 
-const Header = () => {
+const Header = ({greeting, greetingToggler}) => {
     return (
         <div className="Header-div">
-        <Greeting/>
+        <Greeting greeting={greeting} greetingToggler={greetingToggler}/>
       <nav className="Header-nav">
           <DateTime/>
           <Weather/>

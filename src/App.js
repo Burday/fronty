@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './components/css/App.css';
 import Settings from "./components/Main/Settings.js"
 import Header from './components/Main/Header.js'
 import HeaderStyle from './components/themes/HeaderStyle'
-import styled,{ThemeProvider} from "styled-components";
+import {ThemeProvider} from "styled-components";
 import { GlobalStyles } from "./components/themes/globalStyles";
 import { lightTheme, darkTheme } from "./components/themes/Theme"
 import {useDarkMode} from "./components/Main/useDarkMode"
@@ -23,7 +23,7 @@ function App() {
       <header className="App-header">
       <Settings theme={theme} themeToggler={themeToggler} greeting={greeting} greetingToggler={greetingToggler}/>
         <HeaderStyle>
-          <Header/>
+          <Header greeting={greeting} greetingToggler={greetingToggler}/>
         </HeaderStyle>
       </header>
     </div>
