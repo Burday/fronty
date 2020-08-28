@@ -4,6 +4,8 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import '../css/Settings.css'
 import styled from 'styled-components'
 
+
+
 const Settings = ({theme,themeToggler, greetingToggler, greeting}) => {
 
   const CustomIcon = styled(MoreVertIcon)`
@@ -11,13 +13,18 @@ const Settings = ({theme,themeToggler, greetingToggler, greeting}) => {
   `
       //console.log(`State of darkmode ${state.darkMode} \n State of greeting ${state.greeting}`)
 
-      const handleDarkMode = (event) => {
+      const handleDarkMode = () => {
         themeToggler()
       };
 
-      const handleGreeting = (event) => {
+      const handleGreeting = () => {
         greetingToggler()
       };
+
+      const handleSettings = () => {
+        console.log(`bang`)
+        handleClose()
+      }
 
 
     const [anchorEl, setAnchorEl] = useState(null);
@@ -47,6 +54,9 @@ const Settings = ({theme,themeToggler, greetingToggler, greeting}) => {
       <div className="buttonDiv">
       <Button name="greeting" variant="contained" color="primary" onClick={handleGreeting}>{greeting ? "Disable" : "Enable"} Greeting</Button>
       </div>
+       <div className="buttonDiv">
+        <Button name="router" variant="contained" color="primary" onClick={handleSettings}>More Settings</Button>
+        </div>
     </Menu>
         </div> 
     )

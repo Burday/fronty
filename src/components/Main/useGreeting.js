@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 const lelocal = window.localStorage.getItem('greeting');
 const localGreeting = JSON.parse(lelocal)
 
-export const useGreeting = () => {
+export const useGreeting = () => { 
     const [greeting, setGreeting] = useState(localGreeting);
 
     const setMode = mode => {
