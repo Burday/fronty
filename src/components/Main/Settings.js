@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import '../css/Settings.css';
+import DarkThemeToggle from '../redux/DarkThemeToggle';
 
 const Settings = ({ theme, themeToggler, greetingToggler, greeting }) => {
 	const CustomIcon = styled(MoreVertIcon)`
@@ -48,16 +49,7 @@ const Settings = ({ theme, themeToggler, greetingToggler, greeting }) => {
 				open={Boolean(anchorEl)}
 				onClose={handleClose}
 			>
-				<div className="buttonDiv">
-					<Button
-						name="darkMode "
-						variant="contained"
-						color="primary"
-						onClick={handleDarkMode}
-					>
-						{theme ? 'Disable' : 'Enable'} Dark Mode
-					</Button>
-				</div>
+				<DarkThemeToggle />
 				<div className="buttonDiv">
 					<Button
 						name="greeting"
