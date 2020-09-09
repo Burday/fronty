@@ -1,17 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import theme from 'styled-theming';
 import '../css/Input.css';
-
-export const text = theme('theme', {
-	light: '#363537',
-	dark: '#adadad',
-});
-
-export const shadow = theme('theme', {
-	light: '#b5b5b5',
-	dark: '#202020',
-});
+import { shadow, text } from '../redux/differentThemes';
 
 const Input = () => {
 	const Input = styled.input`

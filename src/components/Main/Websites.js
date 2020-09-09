@@ -1,89 +1,148 @@
 import React from 'react';
 import styled from 'styled-components';
-import theme from 'styled-theming';
-import '../css/Websites.css';
-
-export const text = theme('theme', {
-	light: '#363537',
-	dark: '#adadad',
-});
-export const headerBackground = theme('theme', {
-	light: '#dedede',
-	dark: '#303030',
-});
+import { effect, headerBackground, text } from '../redux/differentThemes';
 
 const Websites = () => {
 	const UL = styled.ul`
 		border-color: ${headerBackground};
 		color: ${text};
+		display: table-cell;
+		text-align: center;
+		height: 100%;
+		top: auto;
+		padding: 4px 10px 10px 10px;
+		transition: all 0.5s;
+		cursor: default;
+		list-style-type: none;
+
+		border-style: solid;
+		border-width: 0px 1px 0px 1px;
+	`;
+	const Container = styled.div``;
+	const Listed = styled.div`
+		border-width: 0px 1px 0px 1px;
+		border-right-style: solid;
+		border-left-style: solid;
+		color: ${text};
+		border-color: ${headerBackground};
+		transition: 0.5s;
+
+		&:hover {
+			border-width: 0px 1px 0px 1px;
+			border-right-style: solid;
+			border-left-style: solid;
+			color: ${effect.notSelected};
+			border-color: ${effect.notSelected};
+		}
+
+		& > li > a:hover {
+			color: ${effect.selected};
+			transition: 0.5s;
+		}
+		& > li > a {
+			margin: 0px 10px 0px 10px;
+		}
+	`;
+	const Text = styled.p`
+		top: auto;
+		width: auto;
+		left: auto;
+		right: auto;
+		bottom: 0px;
+		margin-bottom: 0px;
+		margin-top: 5px;
+		font-size: 20px;
+		margin: 0px 10px 0px 10px;
+	`;
+
+	const Unique = styled.a`
+		top: auto;
+		width: auto;
+		left: auto;
+		right: auto;
+		bottom: 0px;
+		margin-bottom: 0px;
+		margin-top: 5px;
+		font-size: 20px;
+		margin: 0px 10px 0px 10px;
 	`;
 	return (
-		<div>
+		<Container>
 			<UL className="entertainment unlisted-element">
-				<p className="title">Entertainment</p>
-				<li>
-					<a href="https://www.youtube.com/">YouTube</a>
-				</li>
-				<li>
-					<a href="https://www.twitch.tv/">Twitch</a>
-				</li>
-				<li>
-					<a href="https://www.sportsurge.net/">SportSurge</a>
-				</li>
+				<Listed>
+					<Text className="title">Entertainment</Text>
+					<li>
+						<a href="https://www.youtube.com/">YouTube</a>
+					</li>
+					<li>
+						<a href="https://www.twitch.tv/">Twitch</a>
+					</li>
+					<li>
+						<a href="https://www.sportsurge.net/">SportSurge</a>
+					</li>
+				</Listed>
 			</UL>
 			<UL className="social unlisted-element">
-				<p className="title">Communication</p>
-				<li>
-					<a href="https://www.messenger.com/">Messenger</a>
-				</li>
-				<li>
-					<a href="https://www.instagram.com/">Instagram</a>
-				</li>
-				<li>
-					<a href="https://www.ruqqus.com/">Ruqqus</a>
-				</li>
+				<Listed>
+					<Text className="title">Communication</Text>
+					<li>
+						<a href="https://www.messenger.com/">Messenger</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/">Instagram</a>
+					</li>
+					<li>
+						<a href="https://www.ruqqus.com/">Ruqqus</a>
+					</li>
+				</Listed>
 			</UL>
 			<UL className="music unlisted-element">
-				<p className="title">Music</p>
-				<li>
-					<a href="https://www.last.fm/">Lastfm</a>
-				</li>
-				<li>
-					<a href="https://www.rym.com/">RateYourMusic</a>
-				</li>
-				<li>
-					<a href="https://www.spotify.com/">Spotify</a>
-				</li>
+				<Listed>
+					<Text className="title">Music</Text>
+					<li>
+						<a href="https://www.last.fm/">Lastfm</a>
+					</li>
+					<li>
+						<a href="https://www.rym.com/">RateYourMusic</a>
+					</li>
+					<li>
+						<a href="https://www.spotify.com/">Spotify</a>
+					</li>
+				</Listed>
 			</UL>
 			<UL className="Reddit unlisted-element">
-				<a className="unique title" href="https://www.reddit.com/">
-					Reddit
-				</a>
-				<li>
-					<a href="https://www.reddit.com/r/formula1">r/formula1</a>
-				</li>
-				<li>
-					<a href="https://www.reddit.com/r/startpages">r/startpages</a>
-				</li>
-				<li>
-					<a href="https://www.reddit.com/r/forsen">r/forsen</a>
-				</li>
+				<Listed>
+					<Unique className="unique title" href="https://www.reddit.com/">
+						Reddit
+					</Unique>
+					<li>
+						<a href="https://www.reddit.com/r/formula1">r/formula1</a>
+					</li>
+					<li>
+						<a href="https://www.reddit.com/r/startpages">r/startpages</a>
+					</li>
+					<li>
+						<a href="https://www.reddit.com/r/forsen">r/forsen</a>
+					</li>
+				</Listed>
 			</UL>
 			<UL className="chan unlisted-element">
-				<a className="unique title" href="https://www.4chan.org/">
-					4chan
-				</a>
-				<li>
-					<a href="https://www.boards.4channel.org/sp/">/sp/</a>
-				</li>
-				<li>
-					<a href="https://www.boards.4channel.org/tv/">/tv/</a>
-				</li>
-				<li>
-					<a href="https://www.boards.4chan.org/pol/">/pol/</a>
-				</li>
+				<Listed>
+					<Unique className="unique title" href="https://www.4chan.org/">
+						4chan
+					</Unique>
+					<li>
+						<a href="https://www.boards.4channel.org/sp/">/sp/</a>
+					</li>
+					<li>
+						<a href="https://www.boards.4channel.org/tv/">/tv/</a>
+					</li>
+					<li>
+						<a href="https://www.boards.4chan.org/pol/">/pol/</a>
+					</li>
+				</Listed>
 			</UL>
-		</div>
+		</Container>
 	);
 };
 export default Websites;

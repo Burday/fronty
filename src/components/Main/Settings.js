@@ -5,16 +5,12 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import '../css/Settings.css';
 import DarkThemeToggle from '../redux/DarkThemeToggle';
-
-const Settings = ({ theme, themeToggler, greetingToggler, greeting }) => {
+import { text } from '../redux/differentThemes';
+const Settings = ({ greetingToggler, greeting }) => {
 	const CustomIcon = styled(MoreVertIcon)`
-		color: ${(props) => props.theme.text};
+		color: ${text};
 	`;
 	//console.log(`State of darkmode ${state.darkMode} \n State of greeting ${state.greeting}`)
-
-	const handleDarkMode = () => {
-		themeToggler();
-	};
 
 	const handleGreeting = () => {
 		greetingToggler();

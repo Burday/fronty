@@ -1,9 +1,12 @@
-.greeting-text{
-    text-align:center;
-    font-size:25px;
-    font-weight:200;
+.greeting-text {
+	text-align: center;
+	font-size: 25px;
+	font-weight: 200;
+	bottom: 0px;
+	margin-bottom: 0px;
+	margin-top: 5px;
 }
- 
-.greeting{
-    margin-bottom: 2%;
+
+.greeting {
+	margin-bottom: 2%;
 }

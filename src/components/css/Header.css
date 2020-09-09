@@ -1,10 +1,18 @@
-.time-text{
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: auto;
-  }
-  
-  .Date-text{
-    font-size:30px;
-    font-weight: 600;
-  }
+.time-text {
+	font-size: 40px;
+	font-weight: 600;
+	margin-bottom: auto;
+
+	bottom: 0px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+}
+
+.Date-text {
+	font-size: 30px;
+	font-weight: 600;
+
+	bottom: 0px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+}

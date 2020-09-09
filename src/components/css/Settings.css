@@ -1,13 +1,11 @@
-.buttonDiv{
-  margin: 1%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+.buttonDiv {
+	margin: 1%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
 
-.Settings-div{
-    margin-left:1%;
-    margin-top: 1%;
-  }
-  
-  
+.Settings-div {
+	margin-left: 1%;
+	margin-top: 1%;
+}

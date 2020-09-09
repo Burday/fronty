@@ -1,5 +1,7 @@
+import { FormControlLabel, Switch } from '@material-ui/core';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
 import { TOGGLE_DARKTHEME } from './actions';
 
 const DarkThemeToggle = () => {
@@ -7,16 +9,21 @@ const DarkThemeToggle = () => {
 		(state) => state.preferences.darkThemeEnabled,
 	);
 	const dispatch = useDispatch();
-
+	const Container = styled.div``;
 	return (
-		<p>
-			<input
-				type="checkbox"
-				checked={darkThemeEnabled}
-				onChange={() => dispatch({ type: TOGGLE_DARKTHEME })}
-			></input>
-			<span>Use Dark Theme</span>
-		</p>
+		<Container>
+			<FormControlLabel
+				control={
+					<Switch
+						checked={darkThemeEnabled}
+						onChange={() => dispatch({ type: TOGGLE_DARKTHEME })}
+						name="checkedA"
+						color="primary"
+					/>
+				}
+				label="Dark Mode"
+			/>
+		</Container>
 	);
 };
 

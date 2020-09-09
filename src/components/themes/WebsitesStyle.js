@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { borderColor, text } from '../redux/differentThemes';
 
 export default styled.div`
-border-color: ${props => props.theme.borderColor}; 
-color:${props => props.theme.text};
-
-`
+	border-color: ${borderColor};
+	color: ${text};
+`;
