@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../Main/Header.js';
-import Settings from '../Main/Settings.js';
-import { useGreeting } from '../Main/useGreeting';
+import Header from '../Home/Header.js';
+import Settings from '../Home/Settings.js';
 import {
 	borderColor,
 	headerBackground,
@@ -34,13 +33,12 @@ function App() {
 	`;
 
 	const App = styled.div``;
-	const [greeting, greetingToggler] = useGreeting();
 	return (
 		<App>
 			<TheHeader>
-				<Settings greeting={greeting} greetingToggler={greetingToggler} />
+				<Settings />
 				<Container>
-					<Header greeting={greeting} greetingToggler={greetingToggler} />
+					<Header />
 				</Container>
 			</TheHeader>
 		</App>

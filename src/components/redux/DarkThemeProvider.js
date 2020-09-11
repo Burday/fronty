@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 const DarkThemeProvider = ({ children }) => {
 	const darkThemeEnabled = useSelector(
 		(state) => state.preferences.darkThemeEnabled,
+		(state) => state.preferences.greetingEnabled,
 	);
 	return (
 		<ThemeProvider theme={{ theme: darkThemeEnabled ? 'dark' : 'light' }}>
