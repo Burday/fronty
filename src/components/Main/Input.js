@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-//import '../css/Input.css';
 import { headerBackground, input, text } from '../redux/differentThemes';
 
 const Input = () => {

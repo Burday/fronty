@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import '../css/App.css';
 import Header from '../Main/Header.js';
 import Settings from '../Main/Settings.js';
 import { useGreeting } from '../Main/useGreeting';
@@ -10,6 +9,7 @@ import {
 	shadow,
 	text,
 } from '../redux/differentThemes';
+
 function App() {
 	const Container = styled.div`
 		background: ${headerBackground};
@@ -32,16 +32,18 @@ function App() {
 		display: flex;
 		position: relative;
 	`;
+
+	const App = styled.div``;
 	const [greeting, greetingToggler] = useGreeting();
 	return (
-		<div className="App">
+		<App>
 			<TheHeader>
 				<Settings greeting={greeting} greetingToggler={greetingToggler} />
 				<Container>
 					<Header greeting={greeting} greetingToggler={greetingToggler} />
 				</Container>
 			</TheHeader>
-		</div>
+		</App>
 	);
 }
 

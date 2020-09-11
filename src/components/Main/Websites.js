@@ -65,6 +65,15 @@ const Websites = () => {
 		margin-top: 5px;
 		font-size: 20px;
 		margin: 0px 10px 0px 10px;
+		color: inherit;
+		text-decoration: none;
+		cursor: pointer;
+	`;
+
+	const Links = styled.a`
+		color: inherit;
+		text-decoration: none;
+		cursor: pointer;
 	`;
 	return (
 		<Container>
@@ -72,13 +81,13 @@ const Websites = () => {
 				<Listed>
 					<Text className="title">Entertainment</Text>
 					<li>
-						<a href="https://www.youtube.com/">YouTube</a>
+						<Links href="https://www.youtube.com/">YouTube</Links>
 					</li>
 					<li>
-						<a href="https://www.twitch.tv/">Twitch</a>
+						<Links href="https://www.twitch.tv/">Twitch</Links>
 					</li>
 					<li>
-						<a href="https://www.sportsurge.net/">SportSurge</a>
+						<Links href="https://www.sportsurge.net/">SportSurge</Links>
 					</li>
 				</Listed>
 			</UL>
@@ -86,13 +95,13 @@ const Websites = () => {
 				<Listed>
 					<Text className="title">Communication</Text>
 					<li>
-						<a href="https://www.messenger.com/">Messenger</a>
+						<Links href="https://www.messenger.com/">Messenger</Links>
 					</li>
 					<li>
-						<a href="https://www.instagram.com/">Instagram</a>
+						<Links href="https://www.instagram.com/">Instagram</Links>
 					</li>
 					<li>
-						<a href="https://www.ruqqus.com/">Ruqqus</a>
+						<Links href="https://www.ruqqus.com/">Ruqqus</Links>
 					</li>
 				</Listed>
 			</UL>
@@ -100,13 +109,13 @@ const Websites = () => {
 				<Listed>
 					<Text className="title">Music</Text>
 					<li>
-						<a href="https://www.last.fm/">Lastfm</a>
+						<Links href="https://www.last.fm/">Lastfm</Links>
 					</li>
 					<li>
-						<a href="https://www.rym.com/">RateYourMusic</a>
+						<Links href="https://www.rym.com/">RateYourMusic</Links>
 					</li>
 					<li>
-						<a href="https://www.spotify.com/">Spotify</a>
+						<Links href="https://www.spotify.com/">Spotify</Links>
 					</li>
 				</Listed>
 			</UL>
@@ -116,13 +125,15 @@ const Websites = () => {
 						Reddit
 					</Unique>
 					<li>
-						<a href="https://www.reddit.com/r/formula1">r/formula1</a>
+						<Links href="https://www.reddit.com/r/formula1">r/formula1</Links>
 					</li>
 					<li>
-						<a href="https://www.reddit.com/r/startpages">r/startpages</a>
+						<Links href="https://www.reddit.com/r/startpages">
+							r/startpages
+						</Links>
 					</li>
 					<li>
-						<a href="https://www.reddit.com/r/forsen">r/forsen</a>
+						<Links href="https://www.reddit.com/r/forsen">r/forsen</Links>
 					</li>
 				</Listed>
 			</UL>
@@ -132,13 +143,13 @@ const Websites = () => {
 						4chan
 					</Unique>
 					<li>
-						<a href="https://www.boards.4channel.org/sp/">/sp/</a>
+						<Links href="https://www.boards.4channel.org/sp/">/sp/</Links>
 					</li>
 					<li>
-						<a href="https://www.boards.4channel.org/tv/">/tv/</a>
+						<Links href="https://www.boards.4channel.org/tv/">/tv/</Links>
 					</li>
 					<li>
-						<a href="https://www.boards.4chan.org/pol/">/pol/</a>
+						<Links href="https://www.boards.4chan.org/pol/">/pol/</Links>
 					</li>
 				</Listed>
 			</UL>
