@@ -45,16 +45,7 @@ export const effect = {
 	selected: '#c0392b',
 };
 
-export const green = theme('theme', {
-	notSelected: '#2ecc71',
-	selected: '#27ae60',
-});
-
-export const blue = theme('theme', {
-	notSelected: '#1abc9c',
-	selected: '#16a085',
-});
-export const purple = theme('theme', {
-	notSelected: '#9b59b6',
-	selected: '#8e44ad',
-});
+export const input = {
+	notFocused: '#adadad',
+	focused: '#27ae60',
+};

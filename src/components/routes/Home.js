@@ -27,16 +27,20 @@ function App() {
 		margin: auto;
 		box-shadow: 10px 5px ${shadow};
 	`;
-
+	const TheHeader = styled.header`
+		min-height: 100vh;
+		display: flex;
+		position: relative;
+	`;
 	const [greeting, greetingToggler] = useGreeting();
 	return (
 		<div className="App">
-			<header className="App-header">
+			<TheHeader>
 				<Settings greeting={greeting} greetingToggler={greetingToggler} />
 				<Container>
 					<Header greeting={greeting} greetingToggler={greetingToggler} />
 				</Container>
-			</header>
+			</TheHeader>
 		</div>
 	);
 }

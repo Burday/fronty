@@ -1,14 +1,24 @@
-import { Button, Menu } from '@material-ui/core';
+import { Button, FormControlLabel, Menu, Switch } from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import '../css/Settings.css';
 import DarkThemeToggle from '../redux/DarkThemeToggle';
 import { text } from '../redux/differentThemes';
 const Settings = ({ greetingToggler, greeting }) => {
 	const CustomIcon = styled(MoreVertIcon)`
 		color: ${text};
+	`;
+	const ButtonContainer = styled.div`
+		margin: 1%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	`;
+
+	const SettingsContainer = styled.div`
+		margin-left: 1%;
+		margin-top: 1%;
 	`;
 	//console.log(`State of darkmode ${state.darkMode} \n State of greeting ${state.greeting}`)
 
@@ -30,7 +40,7 @@ const Settings = ({ greetingToggler, greeting }) => {
 		setAnchorEl(null);
 	};
 	return (
-		<div className="Settings-div">
+		<SettingsContainer>
 			<Button
 				aria-controls="simple-menu"
 				aria-haspopup="true"
@@ -46,18 +56,21 @@ const Settings = ({ greetingToggler, greeting }) => {
 				onClose={handleClose}
 			>
 				<DarkThemeToggle />
-				<div className="buttonDiv">
-					<Button
-						name="greeting"
-						variant="contained"
-						color="primary"
-						onClick={handleGreeting}
-					>
-						{greeting ? 'Disable' : 'Enable'} Greeting
-					</Button>
-				</div>
+				<ButtonContainer>
+					<FormControlLabel
+						control={
+							<Switch
+								checked={greeting}
+								onChange={greetingToggler}
+								name="checkedA"
+								color="primary"
+							/>
+						}
+						label="Greeting"
+					/>
+				</ButtonContainer>
 				<Link to="/settings">
-					<div className="buttonDiv">
+					<ButtonContainer>
 						<Button
 							name="router"
 							variant="contained"
@@ -66,10 +79,10 @@ const Settings = ({ greetingToggler, greeting }) => {
 						>
 							More Settings
 						</Button>
-					</div>
+					</ButtonContainer>
 				</Link>
 			</Menu>
-		</div>
+		</SettingsContainer>
 	);
 };
 

@@ -1,23 +1,17 @@
-
 /*The main header*/
 .App-header {
-  min-height: 100vh;
-  display: flex;
-  position: relative;
-
+	min-height: 100vh;
+	display: flex;
+	position: relative;
 }
 /*Nav that contains website categories*/
 
-
-.Header-div{
-margin:auto;
+.Header-div {
+	margin: auto;
 }
 
-a{
-  color: inherit;
-  text-decoration:none;
-  cursor: pointer;
-  
+a {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
 }
-
-
