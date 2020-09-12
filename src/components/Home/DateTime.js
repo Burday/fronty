@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const Header = () => {
+	const Container = styled.header`
+		margin-bottom: 3%;
+	`;
 	const TimeContainer = styled.p`
 		font-size: 40px;
 		font-weight: 600;
@@ -38,7 +41,7 @@ const Header = () => {
 	}
 
 	return (
-		<header>
+		<Container>
 			<div>
 				<TimeContainer>{time}</TimeContainer>
 			</div>
@@ -46,7 +49,7 @@ const Header = () => {
 			<div>
 				<DateContainer>{date}</DateContainer>
 			</div>
-		</header>
+		</Container>
 	);
 };
 

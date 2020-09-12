@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import DateTime from './DateTime.js';
 import Greeting from './Greeting.js';
 import Input from './Input.js';
-import Weather from './Weather.js';
 import Websites from './Websites.js';
 const Header = ({ greeting, greetingToggler }) => {
 	const Container = styled.div`
@@ -14,7 +13,6 @@ const Header = ({ greeting, greetingToggler }) => {
 			<Greeting greeting={greeting} greetingToggler={greetingToggler} />
 			<nav className="Header-nav">
 				<DateTime />
-				<Weather />
 				<Input />
 				<Websites />
 			</nav>

@@ -9,8 +9,7 @@ const MoreSettings = () => {
 	`;
 	return (
 		<Container>
-			<Hamburger></Hamburger>
-			<h1>hi</h1>
+			<Hamburger />
 		</Container>
 	);
 };

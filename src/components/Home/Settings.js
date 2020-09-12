@@ -15,13 +15,21 @@ const Settings = () => {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
+		color: inherit;
+		text-decoration: none;
+		cursor: pointer;
 	`;
 
 	const SettingsContainer = styled.div`
 		margin-left: 1%;
 		margin-top: 1%;
 	`;
-	//console.log(`State of darkmode ${state.darkMode} \n State of greeting ${state.greeting}`)
+
+	const MoreSettings = styled.a`
+		color: inherit;
+		text-decoration: none;
+		cursor: pointer;
+	`;
 
 	const handleSettings = () => {
 		handleClose();

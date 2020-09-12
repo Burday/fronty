@@ -10,6 +10,7 @@ import {
 } from '../redux/differentThemes';
 
 function App() {
+	console.log(borderColor);
 	const Container = styled.div`
 		background: ${headerBackground};
 		background-color: ${headerBackground};
