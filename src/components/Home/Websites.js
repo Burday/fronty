@@ -1,38 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
-import { effect, headerBackground, text } from '../redux/differentThemes';
+import { effect, text } from '../redux/differentThemes';
 
 const Websites = () => {
 	const UL = styled.ul`
-		border-color: ${headerBackground};
 		color: ${text};
 		display: table-cell;
 		text-align: center;
-		height: 100%;
+		margin: auto;
 		top: auto;
-		padding: 4px 10px 10px 10px;
-		transition: all 0.5s;
+		padding: 1vh;
 		cursor: default;
 		list-style-type: none;
-
-		border-style: solid;
-		border-width: 0px 1px 0px 1px;
+		width: 40%;
+		@media (max-width: 850px) {
+			padding: 0.5vh;
+		}
 	`;
-	const Container = styled.div``;
+	const Container = styled.div`
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: row;
+
+		@media (max-width: 850px) {
+			flex-direction: column;
+		}
+	`;
 	const Listed = styled.div`
-		border-width: 0px 1px 0px 1px;
-		border-right-style: solid;
-		border-left-style: solid;
 		color: ${text};
-		border-color: ${headerBackground};
 		transition: 0.5s;
 
 		&:hover {
-			border-width: 0px 1px 0px 1px;
-			border-right-style: solid;
-			border-left-style: solid;
 			color: ${effect.notSelected};
-			border-color: ${effect.notSelected};
 		}
 
 		& > li > a:hover {
@@ -44,15 +43,9 @@ const Websites = () => {
 		}
 	`;
 	const Text = styled.p`
-		top: auto;
-		width: auto;
-		left: auto;
-		right: auto;
 		bottom: 0px;
-		margin-bottom: 0px;
-		margin-top: 5px;
 		font-size: 20px;
-		margin: 0px 10px 0px 10px;
+		margin: 0;
 	`;
 
 	const Unique = styled.a`
