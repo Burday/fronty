@@ -6,7 +6,6 @@ import DarkThemeProvider from './components/redux/DarkThemeProvider';
 import { body, text } from './components/redux/differentThemes';
 import store from './components/redux/store';
 import Home from './components/routes/Home';
-import Settings from './components/routes/MoreSettings';
 
 const RouteLoader = () => {
 	const Container = styled.div`
@@ -22,7 +21,6 @@ const RouteLoader = () => {
 					<Router>
 						<Switch>
 							<Route path="/" exact component={Home} />
-							<Route path="/settings" component={Settings} />
 						</Switch>
 					</Router>
 				</Container>

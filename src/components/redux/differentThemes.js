@@ -1,43 +1,52 @@
 import theme from 'styled-theming';
-
+import {
+	backgroundF,
+	bodyF,
+	borderColorF,
+	headerBackgroundF,
+	inputBGF,
+	shadowF,
+	textF,
+	toggleBorderF,
+} from './themeSwitch';
 export const body = theme('theme', {
-	light: '#ecf0f1',
-	dark: '#34495e',
+	light: bodyF.light,
+	dark: bodyF.dark,
 });
 
 export const text = theme('theme', {
-	light: '#363537',
-	dark: '#adadad',
+	light: textF.light,
+	dark: textF.dark,
 });
 
 export const borderColor = theme('theme', {
-	light: '#adadad',
-	dark: '#363537',
+	light: borderColorF.light,
+	dark: borderColorF.dark,
 });
 
 export const toggleBorder = theme('theme', {
-	light: '#FFF',
-	dark: '#6B8096',
+	light: toggleBorderF.light,
+	dark: toggleBorderF.dark,
 });
 
 export const background = theme('theme', {
-	light: '#363537',
-	dark: '#242424',
+	light: backgroundF.light,
+	dark: backgroundF.dark,
 });
 
 export const headerBackground = theme('theme', {
-	light: '#dedede',
-	dark: '#2c3e50',
+	light: headerBackgroundF.light,
+	dark: headerBackgroundF.dark,
 });
 
 export const shadow = theme('theme', {
-	light: '#b5b5b5',
-	dark: '#202020',
+	light: shadowF.light,
+	dark: shadowF.dark,
 });
 
 export const inputBG = theme('theme', {
 	light: '',
-	dark: '#242424',
+	dark: inputBGF.dark,
 });
 
 export const effect = {
