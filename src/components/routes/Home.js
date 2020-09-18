@@ -31,8 +31,8 @@ function App() {
 		min-height: 100vh;
 		display: flex;
 		position: relative;
+		width: 100%;
 	`;
-
 	const App = styled.div``;
 	return (
 		<App>
