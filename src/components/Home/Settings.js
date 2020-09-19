@@ -8,11 +8,25 @@ import GreetingToggle from '../redux/greetingToggler';
 const Settings = () => {
 	const CustomIcon = styled(MoreVertIcon)`
 		color: ${text};
+
+		@media (max-width: 850px) {
+			width: 40%;
+		}
 	`;
+
+	const TheButton = styled(Button)``;
 
 	const SettingsContainer = styled.div`
 		margin-left: 1%;
 		margin-top: 1%;
+
+		@media (max-width: 850px) {
+			width: 10%;
+		}
+		@media (max-width: 300px) {
+			width: 1%;
+			margin-left: 0%;
+		}
 	`;
 
 	const [anchorEl, setAnchorEl] = useState(null);
@@ -26,13 +40,13 @@ const Settings = () => {
 	};
 	return (
 		<SettingsContainer>
-			<Button
+			<TheButton
 				aria-controls="simple-menu"
 				aria-haspopup="true"
 				onClick={handleClick}
 			>
 				<CustomIcon />
-			</Button>
+			</TheButton>
 			<Menu
 				id="simple-menu"
 				anchorEl={anchorEl}
