@@ -18,3 +18,10 @@ This will install all dependencies needed to run this site.
 To run the site, simply navigate to the folder and run
 
 `npm start`
+
+### Customizing
+
+If you want to customize this, you can change the colors in redux/differentThemes.js and change the colors to your liking.
+You can also customize the bookmarked sites in Home/Websites.js.
+
+You can also customize this site and it's code in any way you like.
