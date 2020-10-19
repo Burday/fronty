@@ -8,6 +8,10 @@ This is my personal frontpage, Fronty. It has a search function, that searches D
 
 This will install all dependencies needed to run this site.
 
+### Installing the Chrome add-on
+
+By default, it isn't possible to have one important feature of this front page, which is automatically highlighting the URL bar when you enter it. To fix this, I made a chrome add-on which you can download [here](https://github.com/Burday/Fronty-URL-Focuser). More information on how to do it is in the repository.
+
 ### Running
 
 To run the site, simply navigate to the folder and run
