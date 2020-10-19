@@ -20,3 +20,7 @@ If you want to customize this, you can change the colors in redux/differentTheme
 You can also customize the bookmarked sites in Home/Websites.js.
 
 You can also customize this site and it's code in any way you like.
+
+## Online version
+
+You can try to online build on https://fronty-page.netlify.app/ but it's highly customized to me.
