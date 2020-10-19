@@ -104,7 +104,7 @@ const Websites = () => {
 						<Links href="https://www.last.fm/">Lastfm</Links>
 					</li>
 					<li>
-						<Links href="https://www.rym.com/">RateYourMusic</Links>
+						<Links href="https://www.rateyourmusic.com/">RateYourMusic</Links>
 					</li>
 					<li>
 						<Links href="https://www.spotify.com/">Spotify</Links>
