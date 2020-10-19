@@ -1,7 +1,19 @@
 import moment from 'moment';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
+const Text = styled.p`
+	text-align: center;
+	font-size: 25px;
+	font-weight: 200;
+	bottom: 0px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+`;
+
+const Container = styled.div`
+	margin-bottom: 2%;
+`;
 
 const Greeting = () => {
 	const greetingEnabled = useSelector(
@@ -9,18 +21,17 @@ const Greeting = () => {
 	);
 	const [time, setTime] = useState(moment().format(`k`));
 	let theGreet;
-	const Text = styled.p`
-		text-align: center;
-		font-size: 25px;
-		font-weight: 200;
-		bottom: 0px;
-		margin-bottom: 0px;
-		margin-top: 5px;
-	`;
 
-	const Container = styled.div`
-		margin-bottom: 2%;
-	`;
+	useEffect(() => {
+		let timerID = setInterval(() => tick(), 1000);
+		//returns the useEffect funciton by resetting the interval
+		return function cleanup() {
+			clearInterval(timerID);
+		};
+	});
+	function tick() {
+		setTime(moment().format(`k`));
+	}
 	if (greetingEnabled === true) {
 		if (parseInt(time) >= 21 || (parseInt(time) >= 0 && parseInt(time) < 5)) {
 			theGreet = `Good Night`;

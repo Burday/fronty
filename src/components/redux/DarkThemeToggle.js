@@ -3,13 +3,13 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { TOGGLE_DARKTHEME } from './actions';
-
+const Container = styled.div``;
 const DarkThemeToggle = () => {
 	const darkThemeEnabled = useSelector(
 		(state) => state.preferences.darkThemeEnabled,
 	);
 	const dispatch = useDispatch();
-	const Container = styled.div``;
+
 	return (
 		<Container>
 			<FormControlLabel

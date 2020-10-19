@@ -1,73 +1,72 @@
 import React from 'react';
 import styled from 'styled-components';
 import { effect, text } from '../redux/differentThemes';
+const UL = styled.ul`
+	color: ${text};
+	display: table-cell;
+	text-align: center;
+	margin: auto;
+	top: auto;
+	padding: 1vh;
+	cursor: default;
+	list-style-type: none;
+	width: 40%;
+	@media (max-width: 850px) {
+		padding: 0.5vh;
+	}
+`;
+const Container = styled.div`
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
 
-const Websites = () => {
-	const UL = styled.ul`
-		color: ${text};
-		display: table-cell;
-		text-align: center;
-		margin: auto;
-		top: auto;
-		padding: 1vh;
-		cursor: default;
-		list-style-type: none;
-		width: 40%;
-		@media (max-width: 850px) {
-			padding: 0.5vh;
-		}
-	`;
-	const Container = styled.div`
-		display: flex;
-		justify-content: space-evenly;
-		flex-direction: row;
+	@media (max-width: 850px) {
+		flex-direction: column;
+	}
+`;
+const Listed = styled.div`
+	color: ${text};
+	transition: 0.5s;
 
-		@media (max-width: 850px) {
-			flex-direction: column;
-		}
-	`;
-	const Listed = styled.div`
-		color: ${text};
+	&:hover {
+		color: ${effect.notSelected};
+	}
+
+	& > li > a:hover {
+		color: ${effect.selected};
 		transition: 0.5s;
-
-		&:hover {
-			color: ${effect.notSelected};
-		}
-
-		& > li > a:hover {
-			color: ${effect.selected};
-			transition: 0.5s;
-		}
-		& > li > a {
-			margin: 0px 10px 0px 10px;
-		}
-	`;
-	const Text = styled.p`
-		bottom: 0px;
-		font-size: 20px;
-		margin: 0;
-	`;
-
-	const Unique = styled.a`
-		top: auto;
-		width: auto;
-		left: auto;
-		right: auto;
-		bottom: 0px;
-		margin-bottom: 0px;
-		margin-top: 5px;
-		font-size: 20px;
+	}
+	& > li > a {
 		margin: 0px 10px 0px 10px;
-		color: inherit;
-		text-decoration: none;
-		cursor: pointer;
-	`;
+	}
+`;
+const Text = styled.p`
+	bottom: 0px;
+	font-size: 20px;
+	margin: 0;
+`;
 
-	const Links = styled.a`
-		color: inherit;
-		text-decoration: none;
-		cursor: pointer;
-	`;
+const Unique = styled.a`
+	top: auto;
+	width: auto;
+	left: auto;
+	right: auto;
+	bottom: 0px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+	font-size: 20px;
+	margin: 0px 10px 0px 10px;
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+`;
+
+const Links = styled.a`
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+`;
+const Websites = () => {
 	return (
 		<Container>
 			<UL className="entertainment unlisted-element">

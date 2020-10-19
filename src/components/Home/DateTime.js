@@ -1,36 +1,33 @@
 import moment from 'moment';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+const Container = styled.header``;
+const TimeContainer = styled.p`
+	font-size: 40px;
+	font-weight: 600;
+	margin-bottom: auto;
 
+	bottom: 0px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+`;
+const DateContainer = styled.p`
+	font-size: 30px;
+	font-weight: 600;
+
+	bottom: 0px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+`;
+
+const Date = styled.div`
+	width: 100%;
+	margin: auto;
+	@media (max-width: 850px) {
+		width: 85%;
+	}
+`;
 const Header = () => {
-	const Container = styled.header`
-		margin: 3%;
-	`;
-	const TimeContainer = styled.p`
-		font-size: 40px;
-		font-weight: 600;
-		margin-bottom: auto;
-
-		bottom: 0px;
-		margin-bottom: 0px;
-		margin-top: 5px;
-	`;
-	const DateContainer = styled.p`
-		font-size: 30px;
-		font-weight: 600;
-
-		bottom: 0px;
-		margin-bottom: 0px;
-		margin-top: 5px;
-	`;
-
-	const Date = styled.div`
-		width: 100%;
-		margin: auto;
-		@media (max-width: 850px) {
-			width: 85%;
-		}
-	`;
 	//sets the state used for displaying the time and date
 	const [time, setTime] = useState(moment().format(`HH:mm:ss`));
 	const [date, setDate] = useState(moment().format(`MMMM Do`));

@@ -3,13 +3,12 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { TOGGLE_GREETING } from './actions';
-
+const Container = styled.div``;
 const DarkThemeToggle = () => {
 	const greetingEnabled = useSelector(
 		(state) => state.preferences.greetingEnabled,
 	);
 	const dispatch = useDispatch();
-	const Container = styled.div``;
 	return (
 		<Container>
 			<FormControlLabel

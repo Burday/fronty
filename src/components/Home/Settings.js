@@ -5,30 +5,29 @@ import styled from 'styled-components';
 import DarkThemeToggle from '../redux/DarkThemeToggle';
 import { text } from '../redux/differentThemes';
 import GreetingToggle from '../redux/greetingToggler';
+const CustomIcon = styled(MoreVertIcon)`
+	color: ${text};
+
+	@media (max-width: 850px) {
+		width: 40%;
+	}
+`;
+
+const TheButton = styled(Button)``;
+
+const SettingsContainer = styled.div`
+	margin-left: 1%;
+	margin-top: 1%;
+
+	@media (max-width: 850px) {
+		width: 10%;
+	}
+	@media (max-width: 300px) {
+		width: 1%;
+		margin-left: 0%;
+	}
+`;
 const Settings = () => {
-	const CustomIcon = styled(MoreVertIcon)`
-		color: ${text};
-
-		@media (max-width: 850px) {
-			width: 40%;
-		}
-	`;
-
-	const TheButton = styled(Button)``;
-
-	const SettingsContainer = styled.div`
-		margin-left: 1%;
-		margin-top: 1%;
-
-		@media (max-width: 850px) {
-			width: 10%;
-		}
-		@media (max-width: 300px) {
-			width: 1%;
-			margin-left: 0%;
-		}
-	`;
-
 	const [anchorEl, setAnchorEl] = useState(null);
 
 	const handleClick = (event) => {

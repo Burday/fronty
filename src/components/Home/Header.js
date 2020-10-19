@@ -4,10 +4,10 @@ import DateTime from './DateTime.js';
 import Greeting from './Greeting.js';
 import Input from './Input.js';
 import Websites from './Websites.js';
+const Container = styled.div`
+	margin: auto;
+`;
 const Header = ({ greeting, greetingToggler }) => {
-	const Container = styled.div`
-		margin: auto;
-	`;
 	return (
 		<Container>
 			<Greeting greeting={greeting} greetingToggler={greetingToggler} />

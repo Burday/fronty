@@ -6,14 +6,13 @@ import DarkThemeProvider from './components/redux/DarkThemeProvider';
 import { body, text } from './components/redux/differentThemes';
 import store from './components/redux/store';
 import Home from './components/routes/Home';
+const Container = styled.div`
+	background: ${body};
+	color: ${text};
+	transition: all 0.2s linear;
+`;
 
 const RouteLoader = () => {
-	const Container = styled.div`
-		background: ${body};
-		color: ${text};
-		transition: all 0.2s linear;
-	`;
-
 	return (
 		<ReduxProvider store={store}>
 			<DarkThemeProvider>
