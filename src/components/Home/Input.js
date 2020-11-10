@@ -25,7 +25,8 @@ color: ${text};
 `;
 
 const Form = styled.form`
-	margin-bottom: 10px;
+	margin-bottom: 1%;
+	margin-top: 1%;
 	text-align: center;
 `;
 const Input = () => {

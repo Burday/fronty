@@ -12,6 +12,7 @@
 		"moment": "^2.27.0",
 		"moment-duration-format": "^2.3.2",
 		"momentjs": "^2.0.0",
+		"node-fetch": "^2.6.1",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
 		"react-redux": "^7.2.1",
