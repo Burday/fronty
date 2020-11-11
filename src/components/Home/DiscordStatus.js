@@ -1,6 +1,7 @@
 import CircularProgress from '@material-ui/core/CircularProgress';
 import CheckIcon from '@material-ui/icons/Check';
 import CloseIcon from '@material-ui/icons/Close';
+import WarningIcon from '@material-ui/icons/Warning';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 const Container = styled.div`
@@ -20,6 +21,10 @@ const LoadingIcon = styled.div`
 	padding-left: 7%;
 	width: 1%;
 `;
+
+const YellowCheckmark = styled(WarningIcon)`
+	color: #f39c12;
+`;
 const Header = () => {
 	const [text, setText] = useState(`Loading...`);
 	const [status, setStatus] = useState(`loading`);
@@ -30,6 +35,8 @@ const Header = () => {
 					<CircularProgress size="20px" color="#27ae60" />
 				</LoadingIcon>
 			);
+		} else if (status === 'minor') {
+			return <YellowCheckmark />;
 		} else if (status === 'none') {
 			return <Checkmark />;
 		} else {
